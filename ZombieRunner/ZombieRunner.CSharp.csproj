@@ -74,7 +74,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Environment\BackgroundParallax.cs" />
     <Compile Include="Assets\Scripts\Environment\ScrollParallax.cs" />
     <Compile Include="Assets\Scripts\Global\Z_Globals.cs" />
   </ItemGroup>
