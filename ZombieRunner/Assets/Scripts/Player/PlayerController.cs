@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IAffectedByObstacle
 {
     public float jumpVelocity = 15;         // How fast the player will jump
     public float jumpTime = 0.25f;           // How long this velocity will hold until freefall
@@ -52,5 +52,11 @@ public class PlayerController : MonoBehaviour
             // The player has landed and is able to jump again
             onGround = true;
         }
+    }
+
+    // TODO: What happens to the player when they touch an obstacle?
+    public void TouchedObstacle(float spMod)
+    { 
+    
     }
 }
