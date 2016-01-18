@@ -13,7 +13,7 @@ GameObject:
   - 33: {fileID: 3371092}
   m_Layer: 0
   m_Name: FloorTile (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ GameObject:
   - 33: {fileID: 3321172}
   m_Layer: 0
   m_Name: FloorTile (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,7 +65,7 @@ GameObject:
   - 33: {fileID: 3397516}
   m_Layer: 0
   m_Name: FloorTile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.264635414, y: -1.5, z: 1}
+  m_LocalPosition: {x: -.264635414, y: -2.04999995, z: 1}
   m_LocalScale: {x: 40, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 441248}
@@ -89,7 +89,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.264635414, y: -.5, z: 2}
+  m_LocalPosition: {x: -.264635414, y: -1.75, z: 2}
   m_LocalScale: {x: 40, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 441248}
@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171970}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .244635418, y: -.666673183, z: 0}
+  m_LocalPosition: {x: .244635418, y: -.0900000036, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 495300}
@@ -269,8 +269,8 @@ MonoBehaviour:
   - {fileID: 402682}
   - {fileID: 436072}
   parallaxScale: 1
-  parallaxReductionFactor: .25
-  yReductionFactor: .400000006
+  parallaxReductionFactor: .5
+  yReductionFactor: .5
   smoothing: 8
 --- !u!1001 &100100000
 Prefab:

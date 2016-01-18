@@ -32,8 +32,6 @@ public class ScrollParallax : MonoBehaviour
             startTexOffsets[i] = backgrounds[i].gameObject.GetComponent<Renderer>().materials[0].GetTextureOffset("_MainTex");
             startOffsets[i] = new Vector3(backgrounds[i].position.x, backgrounds[i].position.y, backgrounds[i].position.z);
         }
-
-        Z_Globals.RunSpeed = 0.5f; // TODO: Change this to be in player
 	}
 	
 	void Update ()
@@ -44,13 +42,13 @@ public class ScrollParallax : MonoBehaviour
         for (int i = 0; i < backgrounds.Length; i++)
         {
             // Offset height by parallax
-            float backgroundTargetPosY = startOffsets[i].y + parallax * (i * parallaxReductionFactor * yReductionFactor);
+            float backgroundTargetPosY = startOffsets[i].y + parallax * (i * parallaxReductionFactor / 2 * yReductionFactor);
 
             Vector3 backgroundTargetPos = new Vector3(backgrounds[i].position.x, backgroundTargetPosY, backgrounds[i].position.z);
             backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
 
             // Calculate horizontal scroll
-            float x = Mathf.Repeat(Time.time * Z_Globals.RunSpeed * (1 - (i + 1) * parallaxReductionFactor), 1);
+            float x = Mathf.Repeat(Time.time * Z_Globals.RunSpeed * (1 - i * parallaxReductionFactor / 2), backgrounds.Length);
             Vector2 offset = new Vector2(x, startTexOffsets[i].y);
             backgrounds[i].gameObject.GetComponent<Renderer>().materials[0].SetTextureOffset("_MainTex", offset);
         }
