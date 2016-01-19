@@ -51,7 +51,6 @@ public class ScrollParallax : MonoBehaviour
 
             // Calculate horizontal scroll
             float x = Mathf.Repeat(Time.time * Z_Globals.RunSpeed * mat.GetTextureScale("_MainTex").x / backgrounds[i].transform.localScale.x / (i * parallaxReductionFactor + 1), 1);
-            //float x = Mathf.Repeat(Time.time * Z_Globals.RunSpeed / (i + 1) / 10, backgrounds.Length);
             Vector2 offset = new Vector2(x, startTexOffsets[i].y);
             mat.SetTextureOffset("_MainTex", offset);
         }

@@ -75,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Environment\ScrollParallax.cs" />
+    <Compile Include="Assets\Scripts\Environment\WorldGenerator.cs" />
+    <Compile Include="Assets\Scripts\Global\Z_Cleanup.cs" />
     <Compile Include="Assets\Scripts\Global\Z_Globals.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Collectibles\Collectible.cs" />
     <Compile Include="Assets\Scripts\Obstacles\IAffectedByObstacle.cs" />
