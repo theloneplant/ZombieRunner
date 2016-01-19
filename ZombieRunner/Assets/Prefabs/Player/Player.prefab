@@ -25,9 +25,10 @@ GameObject:
   - 4: {fileID: 461088}
   - 212: {fileID: 21228172}
   - 50: {fileID: 5016772}
-  - 61: {fileID: 6165342}
   - 114: {fileID: 11447350}
-  m_Layer: 0
+  - 114: {fileID: 11476808}
+  - 61: {fileID: 6158500}
+  m_Layer: 10
   m_Name: Scientist
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,8 +61,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125726}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -10, y: 0, z: 0}
+  m_LocalScale: {x: .600000024, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 472248}
   m_RootOrder: 0
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 150864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.5, z: -10}
+  m_LocalPosition: {x: 0, y: 5.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 472248}
@@ -135,13 +136,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 5
+  m_GravityScale: 8
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 5
---- !u!61 &6165342
+--- !u!61 &6158500
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -179,9 +180,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a65e67af4854d419f69274d3ffc57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 15
-  jumpTime: .25
-  startRunSpeed: 2
+  jumpVelocity: 20
+  jumpTime: .180000007
+  startRunSpeed: 10
+--- !u!114 &11476808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af93d6bd60df03b43b6d1cefe369b2ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 2304
 --- !u!124 &12424354
 Behaviour:
   m_ObjectHideFlags: 1

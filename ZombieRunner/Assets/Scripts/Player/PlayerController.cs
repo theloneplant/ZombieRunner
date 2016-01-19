@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour, IAffectedByObstacle
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        if (c.gameObject.tag == "Ground" || c.gameObject.tag == "Building" && rb.velocity.y <= 0.2)
+        if ((c.gameObject.tag == "Ground" || c.gameObject.tag == "Building") && rb.velocity.y <= 0.2)
         {
             // The player has landed and is able to jump again
             onGround = true;

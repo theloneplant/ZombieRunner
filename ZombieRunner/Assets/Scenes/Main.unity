@@ -124,45 +124,13 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 461088, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -10
+    - target: {fileID: 6158500, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
+      propertyPath: m_Offset.x
+      value: .944061279
       objectReference: {fileID: 0}
-    - target: {fileID: 461088, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5016772, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_GravityScale
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447350, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: jumpVelocity
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447350, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: jumpTime
-      value: .180000007
-      objectReference: {fileID: 0}
-    - target: {fileID: 461088, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .600000024
-      objectReference: {fileID: 0}
-    - target: {fileID: 461088, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11447350, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: startRunSpeed
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 479518, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 5.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 125726, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
-      propertyPath: m_Layer
-      value: 10
+    - target: {fileID: 6158500, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
+      propertyPath: m_Size.x
+      value: 2.67482281
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
@@ -274,7 +242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11427524, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
       propertyPath: buildingSpawnRate
-      value: 1.32000005
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 11427524, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
       propertyPath: player
@@ -326,10 +294,6 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1730560324}
-    - target: {fileID: 6114852, guid: 2cd5abd782830914aa4509ddfc2b8315, type: 2}
-      propertyPath: m_Size.x
-      value: 2.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cd5abd782830914aa4509ddfc2b8315, type: 2}
   m_IsPrefabParent: 0
@@ -339,20 +303,6 @@ GameObject:
   m_PrefabInternal: {fileID: 305123007}
 --- !u!61 &1730560324 stripped
 BoxCollider2D:
-  m_PrefabParentObject: {fileID: 6165342, guid: 53b3c928f8c60564f884d1e0de14fabb,
+  m_PrefabParentObject: {fileID: 6158500, guid: 53b3c928f8c60564f884d1e0de14fabb,
     type: 2}
   m_PrefabInternal: {fileID: 305123007}
---- !u!114 &1730560328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1730560322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af93d6bd60df03b43b6d1cefe369b2ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 2816

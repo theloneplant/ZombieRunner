@@ -27,7 +27,7 @@ public class PreventPassThrough : MonoBehaviour
             if (hit.distance < Mathf.Abs(yDelta) && yDelta < 0 && hit.distance > 0)
             {
                 // There will be a collision next frame, so set the object on top of the collider
-                rb.position = new Vector2(hit.point.x, hit.point.y);
+                rb.position = new Vector2(hit.point.x, hit.point.y - 0.001f);
                 rb.velocity = new Vector2(rb.velocity.x, 0);
             }
         }

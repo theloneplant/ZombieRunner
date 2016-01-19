@@ -10,8 +10,8 @@ GameObject:
   - 4: {fileID: 472032}
   - 212: {fileID: 21219502}
   - 114: {fileID: 11426914}
-  - 61: {fileID: 6114852}
   - 114: {fileID: 11488380}
+  - 61: {fileID: 6123380}
   m_Layer: 11
   m_Name: Low Building 1
   m_TagString: Building
@@ -31,7 +31,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6114852
+--- !u!61 &6123380
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -41,9 +41,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 1.25, y: 2.44196129}
+  m_Offset: {x: 1.29110265, y: 2.41407537}
   serializedVersion: 2
-  m_Size: {x: 2.75, y: .116078556}
+  m_Size: {x: 2.5822053, y: .171855107}
 --- !u!114 &11426914
 MonoBehaviour:
   m_ObjectHideFlags: 1
