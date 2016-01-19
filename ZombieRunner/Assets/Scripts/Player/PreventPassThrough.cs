@@ -18,7 +18,8 @@ public class PreventPassThrough : MonoBehaviour
 
     void FixedUpdate()
     {
-        RaycastHit2D hit = Physics2D.Raycast(rb.position, -Vector2.up, Mathf.Infinity, layerMask);
+        Vector2 bottomFront = new Vector2(transform.position.x + hitBox.size.x / 2, transform.position.y);
+        RaycastHit2D hit = Physics2D.Raycast(bottomFront, rb.velocity.normalized, Mathf.Infinity, layerMask);
         if (hit.collider != null)
         {
             // Use previous velocity to see if the object will pass through a collider

@@ -3,12 +3,21 @@ using System.Collections;
 
 public class WorldGenerator : MonoBehaviour
 {
-    public GameObject agilityPotion, strengthPotion;
+    public GameObject player;
+
+    public GameObject[] potions;
     public float potionSpawnRate;
 
+    public GameObject[] obstacles;
+    public float obstacleSpawnRate;
+
+    public GameObject[] buildings;
+    public float buildingSpawnRate;
+
     private float potionStartTime;
-    
-	void Start ()
+    private float buildingStartTime;
+
+    void Start ()
     {
         potionStartTime = Time.time;
 	}
@@ -20,23 +29,18 @@ public class WorldGenerator : MonoBehaviour
             makePotion();
             potionStartTime = Time.time;
         }
-	}
+
+        if (Time.time - buildingStartTime > buildingSpawnRate)
+        {
+            makeBuilding();
+            buildingStartTime = Time.time;
+        }
+    }
 
     private void makePotion()
     {
-        int range = Random.Range(0, 100);
-
-        GameObject potion;
-        if (range < 50)
-        {
-            // Make agility potion
-            potion = Instantiate(agilityPotion);
-        }
-        else
-        {
-            // Make strength potion
-            potion = Instantiate(strengthPotion);
-        }
+        int range = Random.Range(0, potions.Length);
+        GameObject potion = Instantiate(potions[range]);
 
         // Set the potion to be off screen and make sure it removes itself later on
         moveRight(ref potion);
@@ -44,16 +48,41 @@ public class WorldGenerator : MonoBehaviour
 
         // Make the potion a child of the world generator
         potion.transform.parent = transform;
+
+        // TODO: Add potion specific properties
     }
 
     private void makeObstacle()
     {
+        int range = Random.Range(0, obstacles.Length);
+        GameObject obstacle = Instantiate(obstacles[range]);
 
+        // Set the obstacle to be off screen and make sure it removes itself later on
+        moveRight(ref obstacle);
+        addCleanup(ref obstacle);
+
+        // Make the obstacle a child of the world generator
+        obstacle.transform.parent = transform;
+
+        // TODO: Add obstacle specific properties
     }
 
     private void makeBuilding()
     {
+        int range = Random.Range(0, buildings.Length);
+        GameObject building = Instantiate(buildings[range]);
 
+        // Set the building to be off screen and make sure it removes itself later on
+        moveRight(ref building);
+        addCleanup(ref building);
+
+        // Make the building a child of the world generator
+        building.transform.parent = transform;
+
+        // Add player to check for one way platform
+        building.GetComponent<OneWayPlatform>().player = player.GetComponent<BoxCollider2D>();
+
+        // TODO: Add building specific properties
     }
 
     private void moveRight(ref GameObject obj)

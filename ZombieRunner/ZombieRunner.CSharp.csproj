@@ -74,11 +74,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Environment\OneWayPlatform.cs" />
     <Compile Include="Assets\Scripts\Environment\ScrollParallax.cs" />
     <Compile Include="Assets\Scripts\Environment\WorldGenerator.cs" />
     <Compile Include="Assets\Scripts\Global\Z_Cleanup.cs" />
     <Compile Include="Assets\Scripts\Global\Z_Globals.cs" />
-    <Compile Include="Assets\Scripts\Obstacles\Collectibles\Collectible.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\Collectibles\ICollectible.cs" />
+    <Compile Include="Assets\Scripts\Obstacles\Collectibles\Potion.cs" />
     <Compile Include="Assets\Scripts\Obstacles\IAffectedByObstacle.cs" />
     <Compile Include="Assets\Scripts\Obstacles\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Obstacles\ScrollLeft.cs" />
