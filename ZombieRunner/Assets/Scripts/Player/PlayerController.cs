@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour, IAffectedByObstacle
             // Prevent the player from jumping again until they land
             buttonUp = true;
         }
-        else if (Input.GetButton("Jump") && rb.velocity.y >= 0)
+        else if (Input.GetButton("Jump") && rb.velocity.y >= -0.01f)
         {
             if (onGround)
             {
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour, IAffectedByObstacle
 
     void OnCollisionEnter2D(Collision2D c)
     {
-        if ((c.gameObject.tag == "Ground" || c.gameObject.tag == "Building") && rb.velocity.y <= 0.2)
+        if ((c.gameObject.tag == "Ground" || c.gameObject.tag == "Building") && rb.velocity.y <= 0.01f)
         {
             // The player has landed and is able to jump again
             onGround = true;

@@ -18,21 +18,31 @@ public class PreventPassThrough : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 bottomFront = new Vector2(transform.position.x + hitBox.size.x / 2, transform.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(bottomFront, rb.velocity.normalized, Mathf.Infinity, layerMask);
-        if (hit.collider != null)
-        {
-            // Use previous velocity to see if the object will pass through a collider
-            float yDelta = rb.position.y - prevPosition.y;
-            if (hit.distance < Mathf.Abs(yDelta) && yDelta < 0 && hit.distance > 0)
-            {
-                // There will be a collision next frame, so set the object on top of the collider
-                rb.position = new Vector2(hit.point.x, hit.point.y - 0.001f);
-                rb.velocity = new Vector2(rb.velocity.x, 0);
-            }
-        }
+        Vector2 bottomBack = new Vector2(transform.position.x, transform.position.y);
+		Vector2 bottomMid = new Vector2(transform.position.x + hitBox.size.x / 2, transform.position.y);
+		Vector2 bottomFront = new Vector2(transform.position.x + hitBox.size.x, transform.position.y);
+
+		// Check for back, mid, and front collision
+		checkHit(Physics2D.Raycast(bottomBack, Vector2.down, Mathf.Infinity, layerMask));
+		checkHit(Physics2D.Raycast(bottomMid, Vector2.down, Mathf.Infinity, layerMask));
+		checkHit(Physics2D.Raycast(bottomFront, Vector2.down, Mathf.Infinity, layerMask));
 
         // Update previous position
         prevPosition = rb.position;
     }
+
+	private void checkHit(RaycastHit2D hit)
+	{
+		if (hit.collider != null)
+		{
+			// Use previous velocity to see if the object will pass through a collider
+			float yDelta = rb.position.y - prevPosition.y;
+			if (hit.distance < Mathf.Abs(yDelta) && yDelta < 0 && hit.distance > 0)
+			{
+				// There will be a collision next frame, so set the object on top of the collider
+				rb.position = new Vector2(hit.point.x, hit.point.y - 0.001f);
+				rb.velocity = new Vector2(rb.velocity.x, 0);
+			}
+		}
+	}
 }
