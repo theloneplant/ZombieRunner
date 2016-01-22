@@ -65,6 +65,7 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
+    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -84,9 +85,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!127 &5
-LevelGameManager:
-  m_ObjectHideFlags: 0
 --- !u!1001 &305123007
 Prefab:
   m_ObjectHideFlags: 0
@@ -133,6 +131,10 @@ Prefab:
     - target: {fileID: 6158500, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
       propertyPath: m_Size.x
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11447350, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
+      propertyPath: startRunSpeed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
@@ -244,7 +246,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11427524, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
       propertyPath: buildingSpawnRate
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11427524, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
       propertyPath: player
@@ -253,7 +255,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1027996964
+--- !u!1 &920183790 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 150864, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
+  m_PrefabInternal: {fileID: 305123007}
+--- !u!114 &920183796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 920183790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c627b338fd84e4da1f2d5dd4739a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+--- !u!1001 &1301266768
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -296,6 +314,14 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1730560324}
+    - target: {fileID: 6183274, guid: 2cd5abd782830914aa4509ddfc2b8315, type: 2}
+      propertyPath: m_Size.y
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183274, guid: 2cd5abd782830914aa4509ddfc2b8315, type: 2}
+      propertyPath: m_Offset.y
+      value: 2.45000005
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cd5abd782830914aa4509ddfc2b8315, type: 2}
   m_IsPrefabParent: 0

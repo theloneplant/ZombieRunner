@@ -14,11 +14,14 @@ public class WorldGenerator : MonoBehaviour
     public GameObject[] buildings;
     public float buildingSpawnRate;
 
+    private BuildingFactory buildingFactory;
     private float potionStartTime;
     private float buildingStartTime;
 
     void Start ()
     {
+        buildingFactory = new BuildingFactory();
+
         potionStartTime = Time.time;
 	}
 	
@@ -70,7 +73,7 @@ public class WorldGenerator : MonoBehaviour
     private void makeBuilding()
     {
         int range = Random.Range(0, buildings.Length);
-        GameObject building = Instantiate(buildings[range]);
+        GameObject building = buildingFactory.makeBuilding(10, Random.Range(5f, 10f));
 
         // Set the building to be off screen and make sure it removes itself later on
         moveRight(ref building);
