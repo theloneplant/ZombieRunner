@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour, IAffectedByObstacle
 
     // TODO: What happens to the player when they touch an obstacle?
     public void TouchedObstacle(float spMod)
-    { 
-    
+    {
+        //Z_Globals.RunSpeed = spMod * startRunSpeed;
     }
 }
