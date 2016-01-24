@@ -4,6 +4,7 @@ using System.Collections;
 public class WorldGenerator : MonoBehaviour
 {
     public GameObject player;
+    public Camera camera;
 
     public GameObject[] potions;
     public float potionSpawnRate;
@@ -52,7 +53,12 @@ public class WorldGenerator : MonoBehaviour
         // Make the potion a child of the world generator
         potion.transform.parent = transform;
 
-        // TODO: Add potion specific properties
+        float bottom = camera.ViewportToWorldPoint(new Vector2(0.5f, 0.5f)).y;
+        float y = camera.ViewportToWorldPoint(new Vector2(0.8f, 0.8f)).y - bottom;
+        potion.transform.position = new Vector3(potion.transform.position.x, bottom + Random.Range(0f, y), potion.transform.position.z);
+
+        // Initialize potion, used in place of Start() due to lack of control
+        potion.GetComponent<Potion>().initStartHeight();
     }
 
     private void makeObstacle()

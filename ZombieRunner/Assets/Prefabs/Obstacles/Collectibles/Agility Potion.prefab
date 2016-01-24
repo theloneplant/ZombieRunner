@@ -11,6 +11,7 @@ GameObject:
   - 114: {fileID: 11487774}
   - 212: {fileID: 21270798}
   - 61: {fileID: 6136340}
+  - 114: {fileID: 11437454}
   m_Layer: 9
   m_Name: Agility Potion
   m_TagString: Untagged
@@ -43,6 +44,19 @@ BoxCollider2D:
   m_Offset: {x: 1.25, y: 1.25}
   serializedVersion: 2
   m_Size: {x: 2.5, y: 2.5}
+--- !u!114 &11437454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48ce9d98ab8f4994286a052b5be1deed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveHeight: 2
+  moveSpeed: 1.5
 --- !u!114 &11487774
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,6 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5393ffceb10ca4e4ab7d7a10fd8e3f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: .5
 --- !u!212 &21270798
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -114,6 +129,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: multiplier
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: waveHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: moveSpeed
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

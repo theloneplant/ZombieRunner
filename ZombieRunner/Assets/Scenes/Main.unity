@@ -136,6 +136,10 @@ Prefab:
       propertyPath: startRunSpeed
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 125726, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
   m_IsPrefabParent: 0
@@ -252,12 +256,25 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1730560322}
+    - target: {fileID: 11427524, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
+      propertyPath: potionSpawnRate
+      value: 2.79999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11427524, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 920183795}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 362ea15c9d0d8a64e878a5b6fa04a8c0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &920183790 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 150864, guid: 53b3c928f8c60564f884d1e0de14fabb, type: 2}
+  m_PrefabInternal: {fileID: 305123007}
+--- !u!20 &920183795 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2037572, guid: 53b3c928f8c60564f884d1e0de14fabb,
+    type: 2}
   m_PrefabInternal: {fileID: 305123007}
 --- !u!114 &920183796
 MonoBehaviour:
